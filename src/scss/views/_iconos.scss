@@ -1,0 +1,46 @@
+@use  'base/variables' as v;
+@use 'base/mixins' as m;
+
+.icons-us{
+    background-color: rgb(255, 255, 255);
+@include m.tablet {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        margin: 2rem;
+    }
+}
+
+.icono {
+    background-color: rgb(205, 205, 205);
+    text-align: center;
+    @include m.tablet{
+        background: rgb(222, 222, 222);
+        border-radius: .5rem;
+        padding: 2rem;
+        color: rgb(28, 28, 28);
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        transition: .5s;
+        &:hover{
+            box-shadow: 0 0 20px rgba(0,0,0,.2);
+            transform: scale(1.1);
+        }
+    }
+    img {
+        height: 10rem;
+        padding-right: 2rem;
+    }
+    h3 {
+        text-transform: uppercase;
+
+    }
+    p{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}

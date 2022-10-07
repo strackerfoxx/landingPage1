@@ -1,0 +1,12 @@
+@use  'base/variables' as v;
+@use 'base/mixins' as m;
+
+.pie{
+    background-color: rgb(52, 52, 52);
+    @include m.tablet{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}

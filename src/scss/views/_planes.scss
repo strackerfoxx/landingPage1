@@ -1,0 +1,45 @@
+@use  'base/variables' as v;
+@use 'base/mixins' as m;
+
+.planes{
+    
+    @include m.tablet{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .plan{
+        text-decoration: none;
+        background: rgb(226, 226, 226);
+        border-radius: .5rem;
+        padding: 2rem;
+        color: rgb(75, 75, 75);
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        transition: .5s;
+        &:hover{
+            box-shadow: 0 0 20px rgba(0,0,0,.2);
+            transform: scale(1.1);
+        }
+        
+    }
+    h3{
+        text-align: center;
+    }
+
+    input[type="submit"] {
+        @include m.boton(rgb(7, 204, 0), rgb(0, 0, 0)); 
+    }
+    
+    .center{
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+    }
+
+}
